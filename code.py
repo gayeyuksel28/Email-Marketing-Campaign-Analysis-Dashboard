@@ -16,9 +16,7 @@ st.write("This dashboard analyzes email marketing campaign data to predict custo
 # Load data function
 def load_data():
     csv_path = os.path.join(os.path.dirname(__file__), 'data', 'Marketingcampaigns.csv')
-    df = pd.read_csv(csv_path)
-    df = df.dropna().reset_index(drop=True)
-    df['Email Clicked'] = df['Email Clicked'].apply(lambda x: 0 if x == 0 else 1)
+    df = pd.read_csv(csv_path, usecols=['Email Clicked'])
     return df
 
 # Data Loading
