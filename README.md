@@ -16,3 +16,5 @@ This project aims to build a Streamlit-based web application that predicts the l
 6. **Feature Importance**: Visualizes the importance of features in predicting email clicks.
 7. **User Input Section**: Allows users to input customer attributes and predict the likelihood of an email click.
 
+Dashboard Link: https://email-marketing-campaign-analysis-dashboard28.streamlit.app/
+
