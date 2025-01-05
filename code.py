@@ -15,10 +15,10 @@ st.write("This dashboard analyzes email marketing campaign data to predict custo
 
 # Load data function
 def load_data():
-    csv_path = os.path.join(os.path.dirname(__file__), 'data', 'Marketingcampaigns.csv')
-    df = pd.read_csv(csv_path, usecols=['Email Clicked'])
+    df = pd.read_csv('data/Marketingcampaigns.csv')
+    df = df.dropna().reset_index(drop=True)
+    df['Email Clicked'] = df['Email Clicked'].apply(lambda x: 0 if x == 0 else 1)
     return df
-
 # Data Loading
 st.header("📊 Data Overview")
 st.write("Below is a preview of the first few rows of our dataset showing customer information and campaign metrics.")
